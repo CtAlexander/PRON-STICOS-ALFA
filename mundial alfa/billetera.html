@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Billetera Alfa</title>
+
+<link rel="stylesheet" href="styles.css">
+
+</head>
+
+<body>
+
+<header class="topbar">
+
+<h2>💰 Billetera Alfa</h2>
+
+<a href="dashboard.html" class="menu-btn">
+Volver
+</a>
+
+</header>
+
+<section class="wallet-container">
+
+<div class="saldo-card">
+
+<h3>Saldo Disponible</h3>
+
+<h1 id="saldoActual">0</h1>
+
+<p>Créditos Alfa</p>
+
+</div>
+
+<div class="wallet-actions">
+
+<button id="btnDepositar">
+💵 Depositar
+</button>
+
+<button id="btnRetirar">
+🏦 Retirar
+</button>
+
+</div>
+
+<div class="wallet-history">
+
+<h2>📊 Historial de Movimientos</h2>
+
+<div id="movimientos">
+
+Cargando movimientos...
+
+</div>
+
+</div>
+
+</section>
+
+<script type="module" src="firebase.js"></script>
+<script type="module" src="billetera.js"></script>
+
+</body>
+
+</html>

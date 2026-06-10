@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Pronósticos Alfa</title>
+
+<link rel="stylesheet" href="styles.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<header class="header">
+
+<div class="logo-area">
+
+<div class="logo">A</div>
+
+<div class="brand">
+
+<h1>PRONÓSTICOS ALFA</h1>
+
+<span>Tu pasión. Tu pronóstico. Tu premio.</span>
+
+</div>
+
+</div>
+
+<div class="user-panel">
+
+<div class="avatar">
+👤
+</div>
+
+<div class="user-info">
+
+<h3 id="nombreUsuario">
+Cargando...
+</h3>
+
+<p>
+Jugador Alfa
+</p>
+
+<div class="progress">
+
+<div class="progress-fill"></div>
+
+</div>
+
+<p>
+Bienvenido
+</p>
+
+</div>
+
+<div class="coins">
+
+🪙
+
+<span id="creditosAlfa">
+0
+</span>
+
+</div>
+
+</div>
+
+</header>
+
+<nav class="navbar">
+
+<a href="dashboard.html" class="active">
+INICIO
+</a>
+
+<a href="apuestas.html">
+PRONÓSTICOS
+</a>
+
+<a href="mis-apuestas.html">
+MIS APUESTAS
+</a>
+
+
+<a href="calendario.html">
+CALENDARIO
+</a>
+
+
+</nav>
+
+<div class="container">
+
+<section class="featured card">
+
+<h2 class="featured-title">
+⚽ PARTIDO DESTACADO
+</h2>
+
+<div class="match">
+
+<div class="team">
+
+<img
+id="logoLocal"
+src=""
+width="90">
+
+<h2 id="equipoLocal">
+Cargando...
+</h2>
+
+</div>
+
+<div>
+
+<div class="vs">
+VS
+</div>
+
+<div
+class="match-info"
+id="infoPartido">
+
+Cargando partido...
+
+</div>
+
+<button
+id="btnApostar"
+class="odds-btn"
+style="margin-top:15px;">
+
+APOSTAR AHORA
+
+</button>
+
+</div>
+
+<div class="team">
+
+<img
+id="logoVisitante"
+src=""
+width="90">
+
+<h2 id="equipoVisitante">
+Cargando...
+</h2>
+
+</div>
+
+</div>
+
+</section>
+
+<div class="grid">
+
+<div class="menu-cards">
+
+<div class="menu-card card">
+
+<i>⚽</i>
+
+<h3>PRONÓSTICOS</h3>
+
+<p>
+Participa en los partidos disponibles.
+</p>
+
+</div>
+
+<div class="menu-card card">
+
+<i>📊</i>
+
+<h3>MIS APUESTAS</h3>
+
+<p>
+Consulta tus apuestas registradas.
+</p>
+
+</div>
+
+<div class="menu-card card">
+
+<i>🏆</i>
+
+<h3>RANKING</h3>
+
+<p>
+Compite contra toda la comunidad.
+</p>
+
+</div>
+
+<div class="menu-card card">
+
+<i>💰</i>
+
+<h3>BILLETERA</h3>
+
+<p>
+Deposita y retira Créditos Alfa.
+</p>
+
+</div>
+
+</div>
+
+<div class="matches-table card">
+
+<h2>
+
+⚽ PARTIDOS DISPONIBLES
+
+</h2>
+
+<div id="listaPartidos">
+
+<div style="padding:20px">
+
+Cargando partidos...
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<section class="summary card">
+
+<h2>
+
+📈 RESUMEN DEL USUARIO
+
+</h2>
+
+<div class="summary-grid">
+
+<div class="summary-box">
+
+<h3>
+APOSTADAS
+</h3>
+
+<strong id="apostadas">
+0
+</strong>
+
+</div>
+
+<div class="summary-box">
+
+<h3>
+GANADAS
+</h3>
+
+<strong id="ganadas">
+0
+</strong>
+
+</div>
+
+<div class="summary-box">
+
+<h3>
+PERDIDAS
+</h3>
+
+<strong id="perdidas">
+0
+</strong>
+
+</div>
+
+</div>
+
+</section>
+
+<div style="margin-top:30px;text-align:center;">
+
+<button
+class="odds-btn"
+onclick="cerrarSesion()">
+
+CERRAR SESIÓN
+
+</button>
+
+</div>
+
+</div>
+
+<footer class="footer">
+
+<div class="footer-left">
+
+⚽ PRONÓSTICOS ALFA
+
+<span class="control-a">
+
+GANA CON ALFA 4 INNOVACIÓN
+
+</span>
+
+</div>
+
+<div class="social">
+
+Conecta Crea Innovación sin limites
+
+</div>
+
+</footer>
+
+<script type="module" src="firebase.js"></script>
+<script type="module" src="dashboard.js"></script>
+
+</body>
+</html>

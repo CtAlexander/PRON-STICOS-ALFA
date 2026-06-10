@@ -1,0 +1,89 @@
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Iniciar Sesión | Pronósticos Alfa</title>
+
+<link rel="stylesheet" href="styles.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<header class="header">
+
+<div class="logo-area">
+
+<div class="logo">
+A
+</div>
+
+<div class="brand">
+
+<h1>PRONÓSTICOS ALFA</h1>
+
+<span>Tu pasión. Tu pronóstico. Tu premio.</span>
+
+</div>
+
+</div>
+
+</header>
+
+<div class="container">
+
+<div class="card" style="max-width:600px;margin:auto;padding:40px;text-align:center;">
+
+<h2 style="font-size:40px;margin-bottom:30px;">
+🔐 INICIAR SESIÓN
+</h2>
+
+<input
+type="email"
+id="loginCorreo"
+placeholder="Correo Electrónico"
+style="width:100%;padding:15px;margin-bottom:15px;border-radius:10px;border:none;font-size:18px;"
+>
+
+<input
+type="password"
+id="loginPassword"
+placeholder="Contraseña"
+style="width:100%;padding:15px;margin-bottom:20px;border-radius:10px;border:none;font-size:18px;"
+>
+
+<button
+class="odds-btn"
+onclick="login()">
+INICIAR SESIÓN
+</button>
+
+<p style="margin-top:20px;">
+
+¿No tienes cuenta?
+
+<a href="registro.html" style="color:#00ff66;">
+Crear Cuenta
+</a>
+
+</p>
+
+<div id="mensaje" style="margin-top:20px;font-size:18px;"></div>
+
+</div>
+
+</div>
+
+<script type="module" src="firebase.js"></script>
+<script type="module" src="auth.js"></script>
+
+</body>
+</html>
+```

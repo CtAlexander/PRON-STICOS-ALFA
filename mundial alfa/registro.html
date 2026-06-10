@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Crear Cuenta | Pronósticos Alfa</title>
+
+<link rel="stylesheet" href="styles.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<header class="header">
+
+<div class="logo-area">
+
+<div class="logo">A</div>
+
+<div class="brand">
+<h1>PRONÓSTICOS ALFA</h1>
+<span>Tu pasión. Tu pronóstico. Tu premio.</span>
+</div>
+
+</div>
+
+</header>
+
+<div class="container">
+
+<div class="card" style="max-width:650px;margin:auto;padding:40px;text-align:center;">
+
+<h2 style="font-size:42px;margin-bottom:30px;">
+📝 CREAR CUENTA
+</h2>
+
+<input
+type="text"
+id="nombre"
+placeholder="Nombre Completo"
+style="width:100%;padding:15px;margin-bottom:15px;border:none;border-radius:10px;font-size:18px;"
+>
+
+<input
+type="email"
+id="correo"
+placeholder="Correo"
+style="width:100%;padding:15px;margin-bottom:15px;border:none;border-radius:10px;font-size:18px;"
+>
+
+<input
+type="text"
+id="telefono"
+placeholder="Teléfono"
+style="width:100%;padding:15px;margin-bottom:15px;border:none;border-radius:10px;font-size:18px;"
+>
+
+<input
+type="password"
+id="password"
+placeholder="Contraseña"
+style="width:100%;padding:15px;margin-bottom:15px;border:none;border-radius:10px;font-size:18px;"
+>
+
+<input
+type="password"
+id="confirmPassword"
+placeholder="Confirmar Contraseña"
+style="width:100%;padding:15px;margin-bottom:15px;border:none;border-radius:10px;font-size:18px;"
+>
+
+<button
+class="odds-btn"
+style="width:100%;"
+onclick="registrarUsuario()">
+CREAR CUENTA
+</button>
+
+<p style="margin-top:20px;">
+
+¿Ya tienes cuenta?
+
+<a href="login.html" style="color:#00ff66;">
+Iniciar Sesión
+</a>
+
+</p>
+
+<div id="mensaje" style="margin-top:20px;font-size:18px;"></div>
+
+</div>
+
+</div>
+
+<script type="module" src="firebase.js"></script>
+<script type="module" src="auth.js"></script>
+
+</body>
+</html>

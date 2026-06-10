@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Pronósticos Alfa | Apostar</title>
+
+<link rel="stylesheet" href="styles.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<header class="header">
+
+<div class="logo-area">
+
+<div class="logo">
+A
+</div>
+
+<div class="brand">
+
+<h1>PRONÓSTICOS ALFA</h1>
+
+<span>Realiza tu pronóstico oficial</span>
+
+</div>
+
+</div>
+
+<div class="user-panel">
+
+<div class="coins">
+
+💰 Créditos:
+<strong id="saldoUsuario">
+0
+</strong>
+
+</div>
+
+</div>
+
+</header>
+
+<nav class="navbar">
+
+<a href="dashboard.html">
+INICIO
+</a>
+
+<a href="calendario.html">
+CALENDARIO
+</a>
+
+<a href="#" class="active">
+APOSTAR
+</a>
+
+<a href="#"
+   id="btnReclamarPremio"
+   class="menu-link">
+   RECLAMAR PREMIO
+</a>
+
+<div id="mensajePremio"></div>
+
+</nav>
+
+<div class="container">
+
+<!-- INFORMACIÓN DEL PARTIDO -->
+
+<section class="featured card">
+
+<h2 class="featured-title">
+
+⚽ PARTIDO SELECCIONADO
+
+</h2>
+
+<div id="partidoSeleccionado">
+
+<div id="apuestasContainer"></div>
+
+<div id="premiosContainer"></div>
+
+<div class="match">
+
+<div class="team">
+
+<img id="logoLocal" src="">
+
+<h2 id="nombreLocal">
+
+LOCAL
+
+</h2>
+
+</div>
+
+<div>
+
+<div class="vs">
+
+VS
+
+</div>
+
+<div class="match-info">
+
+<div id="fechaPartido">
+
+Fecha
+
+</div>
+
+<div id="grupoPartido">
+
+Grupo
+
+</div>
+
+<div id="ciudadPartido">
+
+Ciudad
+
+</div>
+
+</div>
+
+</div>
+
+<div class="team">
+
+<img id="logoVisitante" src="">
+
+<h2 id="nombreVisitante">
+
+VISITANTE
+
+</h2>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ESTADÍSTICAS -->
+
+<section class="summary card">
+
+<h2>
+
+📊 INFORMACIÓN DE APUESTAS
+
+</h2>
+
+<div class="summary-grid">
+
+<div class="summary-box">
+
+<h3>USUARIOS</h3>
+
+<strong id="usuariosParticipando">
+
+0
+
+</strong>
+
+<p>
+
+Participando actualmente
+
+</p>
+
+</div>
+
+<div class="summary-box">
+
+<h3>BOLSA TOTAL</h3>
+
+<strong id="bolsaTotal">
+
+0
+
+</strong>
+
+<p>
+
+Créditos acumulados
+
+</p>
+
+</div>
+
+<div class="summary-box">
+
+<h3>CIERRE</h3>
+
+<strong id="contador">
+
+--:--:--
+
+</strong>
+
+<p>
+
+Tiempo restante
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- FORMULARIO -->
+
+<section class="card">
+
+<h2 class="section-title">🎯 REALIZAR PRONÓSTICO</h2>
+
+<div class="bet-grid">
+
+  <div class="bet-box">
+    <label>¿Quién gana?</label>
+    <select id="ganador"></select>
+  </div>
+
+  <div class="bet-box">
+    <label>Marcador Local</label>
+    <input type="number" id="marcadorLocal" min="0" value="0">
+  </div>
+
+  <div class="bet-box">
+    <label>Marcador Visitante</label>
+    <input type="number" id="marcadorVisitante" min="0" value="0">
+  </div>
+
+  <div class="bet-box">
+    <label>Créditos a apostar</label>
+    <input type="number" id="creditos" min="1" value="20">
+  </div>
+
+</div>
+
+<button id="btnContinuar" class="odds-btn big-btn">
+  CONTINUAR
+</button>
+
+</section>
+
+<!-- RESUMEN -->
+
+<section class="summary card">
+
+<h2>
+
+🏆 REGLAS DE PREMIOS
+
+</h2>
+
+<div class="summary-grid">
+
+<div class="summary-box">
+
+<h3>90%</h3>
+
+<p>
+
+La bolsa de premios se reparte entre los ganadores.
+
+</p>
+
+</div>
+
+<div class="summary-box">
+
+<h3>10%</h3>
+
+<p>
+
+Comisión de Alfa 4 Innovación.
+
+</p>
+
+</div>
+
+<div class="summary-box">
+
+<h3>70% / 30%</h3>
+
+<p>
+
+70% para marcador exacto y 30% para acertar ganador.
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+</div>
+
+<!-- MODAL CONFIRMACIÓN -->
+
+<div id="modalConfirmacion" class="modal">
+
+<div class="modal-content">
+
+<h2>
+
+⚠ Confirmar Pronóstico
+
+</h2>
+
+<p>
+
+Al confirmar aceptas que:
+
+</p>
+
+<ul>
+
+<li>
+La apuesta se cerrará antes del inicio del partido.
+</li>
+
+<li>
+Debe haber mínimo 3 participantes.
+</li>
+
+<li>
+Si no se alcanza el mínimo, los créditos serán devueltos.
+</li>
+
+<li>
+Alfa 4 Innovación retiene el 10%.
+</li>
+
+<li>
+Los premios se calculan automáticamente.
+</li>
+
+<li>
+El marcador exacto recibe prioridad en la distribución.
+</li>
+
+</ul>
+
+<button
+id="btnConfirmar"
+class="odds-btn">
+
+CONFIRMAR APUESTA
+
+</button>
+
+<button
+id="btnCancelar"
+class="odds-btn">
+
+CANCELAR
+
+</button>
+
+</div>
+
+</div>
+
+<!-- MODAL GANADOR -->
+
+<div id="modalPremio" class="modal">
+
+<div class="modal-content">
+
+<h2>
+
+🏆 FELICIDADES
+
+</h2>
+
+<p id="mensajePremio">
+
+Has ganado créditos.
+
+</p>
+
+<button
+id="btnCobrar"
+class="odds-btn">
+
+RECLAMAR CRÉDITOS
+
+</button>
+
+</div>
+
+</div>
+
+<footer class="footer">
+
+<div class="footer-left">
+
+⚽ PRONÓSTICOS ALFA
+
+<span class="control-a">
+
+Sistema Oficial Mundial 2026
+
+</span>
+
+<span class="control-b">
+
+ALFA 4 Innovación
+
+</span>
+
+</div>
+
+<div class="social">
+
+Conecta Crea Innovación sin límites.
+
+</div>
+
+</footer>
+
+<script type="module" src="firebase.js"></script>
+<script type="module" src="apuestas.js"></script>
+
+</body>
+
+</html>
